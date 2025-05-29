@@ -3,221 +3,407 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Platinum Scoops | Pet Waste Removal in Central Texas</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <title>Platinum Scoops | Pet Waste Removal in Waco & Central Texas</title>
+  <meta name="description" content="Professional pet waste removal serving Waco, Woodway, Hewitt, Robinson & surrounding Central Texas. Book Platinum Scoops today for a cleaner yard and happier pets." />
+  <link rel="canonical" href="https://platinumscoops.com/" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --primary: #2e7d32;
-      --secondary: #f5f5f5;
-      --dark: #1a1a1a;
-      --light: #ffffff;
+      --primary: #1e90ff;
+      --accent: #ffb703;
+      --dark: #1f2937;
+      --light: #f9fafb;
+      --radius: 0.5rem;
     }
+
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: "Poppins", sans-serif;
+      font-family: "Inter", sans-serif;
     }
+
     body {
-      background: var(--light);
       color: var(--dark);
+      background: var(--light);
       line-height: 1.6;
     }
-    /* Navigation */
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      background: var(--light);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    }
-    .navbar .logo img {
-      height: 48px;
-    }
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 1.5rem;
-    }
-    .nav-links a {
-      text-decoration: none;
-      color: var(--dark);
-      font-weight: 600;
-      transition: color 0.2s ease;
-    }
-    .nav-links a:hover {
+
+    a {
       color: var(--primary);
-    }
-    .btn-primary {
-      background: var(--primary);
-      color: var(--light);
-      padding: 0.75rem 1.5rem;
-      border-radius: 4px;
       text-decoration: none;
-      font-weight: 600;
-      transition: background 0.2s ease;
     }
-    .btn-primary:hover {
-      background: #256628;
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4rem 0;
     }
+
     /* Hero */
     .hero {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      padding: 4rem 2rem;
-      gap: 2rem;
-      background: var(--secondary);
+      background: url("https://images.unsplash.com/photo-1507149833265-60c372daea22?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
+      color: #fff;
+      text-align: center;
+      padding: 8rem 0;
+      position: relative;
     }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+    }
+
     .hero-content {
-      flex: 1 1 400px;
-      max-width: 600px;
+      position: relative;
+      z-index: 1;
     }
-    .hero-content h1 {
-      font-size: 2.5rem;
+
+    .hero h1 {
+      font-size: clamp(2rem, 5vw + 1rem, 3.5rem);
+      font-weight: 700;
       margin-bottom: 1rem;
     }
-    .hero-content p {
-      font-size: 1.125rem;
+
+    .hero p {
+      font-size: 1.25rem;
       margin-bottom: 2rem;
-      color: #555;
     }
-    .hero-img {
-      flex: 1 1 300px;
-      max-width: 500px;
-      width: 100%;
-      border-radius: 8px;
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--dark);
+      padding: 0.9rem 2rem;
+      border-radius: var(--radius);
+      font-weight: 600;
+      transition: background 0.3s ease;
     }
-    /* Sections */
-    section {
-      padding: 4rem 2rem;
+
+    .btn-primary:hover {
+      background: #ffd166;
     }
-    #why {
-      background: var(--light);
+
+    /* Benefits */
+    #benefits {
+      background: #fff;
     }
-    #why h2 {
+
+    #benefits h2 {
       text-align: center;
-      margin-bottom: 2rem;
       font-size: 2rem;
+      margin-bottom: 2rem;
     }
-    .grid {
+
+    .benefit-list {
+      list-style: none;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 2rem;
-      max-width: 1000px;
-      margin: 0 auto;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
-    .card {
-      background: var(--secondary);
-      padding: 2rem;
-      border-radius: 8px;
-      text-align: center;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+
+    .benefit-list li {
+      background: var(--light);
+      padding: 1.5rem;
+      border-left: 4px solid var(--primary);
+      border-radius: var(--radius);
+      font-weight: 500;
     }
-    .card h3 {
-      margin-bottom: 0.75rem;
-      color: var(--primary);
-    }
+
     /* Service Areas */
+    #service-areas {
+      background: var(--primary);
+      color: #fff;
+    }
+
     #service-areas h2 {
       text-align: center;
-      margin-bottom: 2rem;
       font-size: 2rem;
+      margin-bottom: 2rem;
     }
-    #service-areas ul {
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
+
+    .areas {
+      display: grid;
       gap: 1rem;
-      justify-content: center;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
-    #service-areas a {
-      text-decoration: none;
-      color: var(--primary);
+
+    .area-card {
+      background: #fff;
+      color: var(--dark);
+      padding: 1.25rem;
+      border-radius: var(--radius);
+      text-align: center;
       font-weight: 600;
+      transition: transform 0.2s ease;
     }
-    #service-areas a:hover {
-      text-decoration: underline;
-    }
+
+    .area-card:hover {
+
+      
+}
+
+      Announcement Bar */
+.announcement {
+  background: var(--primary);
+  color: #fff;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+}
+
+/* Navigation */
+.main-nav {
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 0;
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: var(--dark);
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+/* Booking Section */
+.booking-section {
+  background: #f7fafc;
+  padding: 4rem 0;
+}
+
+.booking-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Shop Section */
+.shop-section {
+  padding: 4rem 0;
+}
+
+.shop-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+      
+  
+
     /* Footer */
     footer {
       background: var(--dark);
-      color: var(--light);
-      text-align: center;
-      padding: 2rem 1rem;
-      margin-top: 2rem;
-    }
+      color: #fff;
+  <    }
   </style>
 </head>
-<body>
+
+<body>>
+  <!-- Announcement Bar -->
+  <div class="announcement">CLAIM YOUR FREE CLEANUP TODAY!</div>
+
   <!-- Navigation -->
-  <nav class="navbar">
-    <div class="logo">
-      <a href="index.html"><img src="Platinum Scoops High Res.png" alt="Platinum Scoops Logo" /></a>
+  <nav class="main-nav">
+    <div class="nav-container">
+      <a href="/" class="logo">Platinum Scoops</a>
+      <ul class="nav-links">
+        <li><a href="#booking">Schedule a Scoop</a></li>
+        <li><a href="#benefits">Your Routine</a></li>
+        <li><a href="#shop">The Essentials</a></li>
+        <li><a href="#service-areas">Where We Work</a></li>
+      </ul>
     </div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="store.html">Store</a></li>
-      <li><a href="blog/index.html">Blog</a></li>
-      <li><a href="#service-areas">Service Areas</a></li>
-      <li><a class="btn-primary" href="https://your-jobber-booking-link">Schedule Service</a></li>
-    </ul>
   </nav>
 
-  <!-- Hero -->
+  
+  <!-- Hero Section -->
   <header class="hero">
-    <div class="hero-content">
-      <h1>Stress‑Free Pet Waste Removal</h1>
-      <p>Enjoy a pristine, odor‑free yard—Platinum Scoops keeps your outdoor space spotless so you can focus on what matters.</p>
-      <a href="https://your-jobber-booking-link" class="btn-primary">Book Now</a>
+    <div class="container hero-content">
+      <h1>Central Texas' #1 Pet Waste Removal Service</h1>
+      <p>Enjoy a spotless yard without lifting a finger. Weekly & one‑time scooping available.</p>
+      <a href="/get-a-quote" class="btn-primary">Get a Free Quote</a>
     </div>
-    <img src="Untitled design (6).png" alt="Happy dog in a clean yard" class="hero-img" />
   </header>
 
   <!-- Why Choose Us -->
-  <section id="why">
-    <h2>Why Choose Platinum Scoops?</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Eco‑Friendly</h3>
-        <p>We use biodegradable bags and dispose of waste responsibly—good for your yard and the planet.</p>
-      </div>
-      <div class="card">
-        <h3>Reliable</h3>
-        <p>Our punctual, professional technicians ensure your yard is cleaned on schedule every time.</p>
-      </div>
-      <div class="card">
-        <h3>Pet‑Loving Team</h3>
-        <p>We treat your pets like family, making sure they feel safe and happy while we work.</p>
-      </div>
-      <div class="card">
-        <h3>100% Satisfaction</h3>
-        <p>If you’re not thrilled with our service, we’ll make it right—guaranteed.</p>
-      </div>
+  <section id="benefits">
+    <div class="container">
+      <h2>Why Choose Platinum Scoops?</h2>
+      <ul class="benefit-list">
+        <li><strong>Trusted &amp; Insured:</strong> Your pets and property are always protected.</li>
+        <li><strong>100% Satisfaction Guarantee:</strong> We scoop until you're happy.</li>
+        <li><strong>Eco‑Friendly Disposal:</strong> We keep waste out of landfills whenever possible.</li>
+        <li><strong>Flexible Scheduling:</strong> Weekly, bi‑weekly, or one‑time cleanups.</li>
+      </ul>
     </div>
+
+    
+<!-- Booking Section -->
+<section id="booking" class="booking-section">
+  <div class="container">
+    <h2>Schedule a Scoop</h2>
+    <!-- Jobber Booking Widget -->
+    <div id="08639c40-c72a-485f-8e76-f80064f23f20"></div>
+    <link rel="stylesheet" href="https://d3ey4dbjkt2f6s.cloudfront.net/assets/external/work_request_embed.css" media="screen" />
+    <script src="https://d3ey4dbjkt2f6s.cloudfront.net/assets/static_link/work_request_embed_snippet.js"
+            clienthub_id="08639c40-c72a-485f-8e76-f80064f23f20"
+            form_url="https://clienthub.getjobber.com/client_hubs/08639c40-c72a-485f-8e76-f80064f23f20/public/work_request/embedded_work_request_form">
+    </script>
+  </div>
+</section>
+
   </section>
 
   <!-- Service Areas -->
   <section id="service-areas">
-    <h2>Our Service Areas</h2>
-    <ul>
-      <li><a href="poop-scooping-hewitt-tx.html">Hewitt, TX</a></li>
-      <li><a href="poop-scooping-waco-tx.html">Waco, TX</a></li>
-      <li><a href="poop-scooping-woodway-tx.html">Woodway, TX</a></li>
-      <!-- Add more cities as you expand -->
-    </ul>
+    <div class="container">
+      <h2>Service Areas</h2>
+      <p style="text-align:center; margin-bottom:2rem;">We proudly serve Waco and the surrounding communities:</p>
+      <div class="areas">
+        <a href="/woodway" class="area-card">Woodway, TX</a>
+        <a href="/hewitt" class="area-card">Hewitt, TX</a>
+        <a href="/robinson" class="area-card">Robinson, TX</a>
+        <a href="/china-spring" class="area-card">China Spring, TX</a>
+      </div>
+      <p style="text-align:center; margin-top:2rem;">Looking for service somewhere else? <a href="/contact" style="color:#ffd166;">Contact us</a> and we'll see if we can help!</p>
+  
+<!-- Shop Section -->
+<section id="shop" class="shop-section">
+  <div class="container">
+    <h2>The Essentials</h2>
+    <div id='product-component-1748535197690'></div>
+  </div>
+</section>
+
+<!-- Shopify Buy Button Script -->
+<script type="text/javascript">
+/*<![CDATA[*/
+(function () {
+  var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+  if (window.ShopifyBuy) {
+    if (window.ShopifyBuy.UI) {
+      ShopifyBuyInit();
+    } else {
+      loadScript();
+    }
+  } else {
+    loadScript();
+  }
+  function loadScript() {
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = scriptURL;
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+    script.onload = ShopifyBuyInit;
+  }
+  function ShopifyBuyInit() {
+    var client = ShopifyBuy.buildClient({
+      domain: 'upfsy5-3a.myshopify.com',
+      storefrontAccessToken: 'af85f63c3bdebe73abb2411fa75075c8',
+    });
+    ShopifyBuy.UI.onReady(client).then(function (ui) {
+      ui.createComponent('product', {
+        id: '9871144943892',
+        node: document.getElementById('product-component-1748535197690'),
+        moneyFormat: '%24%7B%7Bamount%7D%7D',
+        options: {
+          "product": {
+            "styles": {
+              "product": {
+                "@media (min-width: 601px)": {
+                  "max-width": "calc(25% - 20px)",
+                  "margin-left": "20px",
+                  "margin-bottom": "50px"
+                }
+              }
+            },
+            "text": {
+              "button": "Add to cart"
+            }
+          },
+          "productSet": {
+            "styles": {
+              "products": {
+                "@media (min-width: 601px)": {
+                  "margin-left": "-20px"
+                }
+              }
+            }
+          },
+          "modalProduct": {
+            "contents": {
+              "img": false,
+              "imgWithCarousel": true,
+              "button": false,
+              "buttonWithQuantity": true
+            },
+            "styles": {
+              "product": {
+                "@media (min-width: 601px)": {
+                  "max-width": "100%",
+                  "margin-left": "0px",
+                  "margin-bottom": "0px"
+                }
+              }
+            },
+            "text": {
+              "button": "Add to cart"
+            }
+          },
+          "option": {},
+          "cart": {
+            "text": {
+              "total": "Subtotal",
+              "button": "Checkout"
+            }
+          },
+          "toggle": {}
+        },
+      });
+    });
+  }
+})();
+/*]]>*/
+</script>
+
+    </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Platinum Scoops. All rights reserved.</p>
+    <div class="container">
+      <p>&copy; 2025 Platinum Scoops. All rights reserved.</p>
+    </div>
   </footer>
 </body>
 </html>

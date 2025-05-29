@@ -44,7 +44,7 @@
 
     /* Hero */
     .hero {
-      background: url("https://images.unsplash.com/photo-1507149833265-60c372daea22?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
+      background: url("pexels-honggyu-kim-582278127-17407385.jpger/cover no-repeat;
       color: #fff;
       text-align: center;
       padding: 8rem 0;
@@ -217,7 +217,44 @@
   margin-bottom: 2rem;
 }
 
-      
+  
+/* Pricing */
+.pricing {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin-top: 3rem;
+}
+
+.plan {
+  background: var(--light);
+  padding: 2rem;
+  border: 1px solid #e5e7eb;
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+.plan h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.plan .price {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.plan ul {
+  list-style: none;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.plan ul li {
+  margin-bottom: 0.5rem;
+}
+    
   
 
     /* Footer */
@@ -235,7 +272,7 @@
   <!-- Navigation -->
   <nav class="main-nav">
     <div class="nav-container">
-      <a href="/" class="logo">Platinum Scoops</a>
+   <a href="/" class="logo"><img src="Platinum%20Scoops%20High%20Res.png" alt="Platinum Scoops Logo" style="height:40px;"></a>/a>
       <ul class="nav-links">
         <li><a href="#booking">Schedule a Scoop</a></li>
         <li><a href="#benefits">Your Routine</a></li>
@@ -251,7 +288,7 @@
     <div class="container hero-content">
       <h1>Central Texas' #1 Pet Waste Removal Service</h1>
       <p>Enjoy a spotless yard without lifting a finger. Weekly & one‑time scooping available.</p>
-      <a href="/get-a-quote" class="btn-primary">Get a Free Quote</a>
+   <a href="#booking" class="btn-primary" onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'});">Schedule a Scoop</a>>
     </div>
   </header>
 
@@ -264,7 +301,40 @@
         <li><strong>100% Satisfaction Guarantee:</strong> We scoop until you're happy.</li>
         <li><strong>Eco‑Friendly Disposal:</strong> We keep waste out of landfills whenever possible.</li>
         <li><strong>Flexible Scheduling:</strong> Weekly, bi‑weekly, or one‑time cleanups.</li>
+   
+        <!-- Pricing Plans -->
+  <div class="pricing">
+    <div class="plan">
+      <h3>Starter</h3>
+      <p class="price">$15 / visit</p>
+      <ul>
+        <li>1 dog</li>
+        <li>Weekly service</li>
       </ul>
+      <a href="#booking" class="btn-primary">Choose Starter</a>
+    </div>
+    <div class="plan">
+      <h3>Standard</h3>
+      <p class="price">$25 / visit</p>
+      <ul>
+        <li>Up to 2 dogs</li>
+        <li>Weekly service</li>
+        <li>Deodorizer spray</li>
+      </ul>
+      <a href="#booking" class="btn-primary">Choose Standard</a>
+    </div>
+    <div class="plan">
+      <h3>Platinum</h3>
+      <p class="price">$40 / visit</p>
+      <ul>
+        <li>Unlimited dogs</li>
+        <li>Twice‑weekly service</li>
+        <li>Deodorizer + yard freshener</li>
+      </ul>
+      <a href="#booking" class="btn-primary">Choose Platinum</a>
+    </div>
+  </div>
+>
     </div>
 
     

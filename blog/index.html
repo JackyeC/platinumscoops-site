@@ -8,8 +8,27 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body {font-family:Poppins, sans-serif; margin:0; padding:2rem; background:#fff; color:#333;}
-    .navbar {margin-bottom:2rem;}
+    body {font-family:Poppins, sans-serif; margin:0; padding:2rem;  background: var(--light); color: var(--dark);
+   
+      :root {
+    --platinum: #E5E4E2;
+    --baylor-gold: #FFB81C;
+    --baylor-green: #154734;
+    --rich-navy: #1F2F44;
+    --dusty-rose: #D9A5B3;
+    --powder-blue: #AFCBDE;
+    --soft-sage: #C9D6CD;
+    --warm-clay: #D38F66;
+    --rich-charcoal: #333333;
+
+    /* Legacy mappings */
+    --primary: var(--baylor-gold);
+    --accent: var(--baylor-green);
+    --dark: var(--rich-charcoal);
+    --light: var(--platinum);
+  }
+
+.navbar {margin-bottom:2rem;}
     .navbar a {text-decoration:none; color:#333; font-weight:600; margin-right:1rem;}
     article {margin-bottom:2rem; border-bottom:1px solid #eee; padding-bottom:1rem;}
     h1 {margin-bottom:1rem;}

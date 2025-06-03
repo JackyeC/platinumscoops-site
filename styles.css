@@ -34,3 +34,73 @@ h2 { text-align: center; margin-bottom: 1.5rem; }
 
 /* Footer */
 footer { background: #f4f4f4; text-align: center; padding: 1rem; margin-top: 3rem; }
+
+/* === Platinum Scoops Brand Overrides === */
+
+:root {
+  --platinum:      #E5E4E2;
+  --baylor-gold:   #FFB81C;
+  --baylor-green:  #154734;
+  --rich-navy:     #1F2F44;
+  --dusty-rose:    #D9A5B3;
+  --powder-blue:   #AFCBDE;
+  --soft-sage:     #C9D6CD;
+  --warm-clay:     #D38F66;
+  --rich-charcoal: #333333;
+
+  --primary: var(--baylor-gold);   /* Bold CTAs */
+  --accent:  var(--baylor-green);  /* Secondary CTAs */
+  --dark:    var(--rich-charcoal);
+  --light:   var(--platinum);
+}
+
+/* Typography */
+body,
+button,
+input,
+select,
+textarea {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: var(--dark);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  color: var(--dark);
+}
+
+/* Links */
+a { color: var(--accent); }
+a:hover { color: var(--primary); }
+
+/* Buttons */
+.btn-primary   { background: var(--primary); color: var(--dark); }
+.btn-secondary { background: var(--accent);  color: #fff; }
+
+/* Navigation Bar */
+.navbar {
+  background: var(--platinum);
+  color: var(--dark);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.navbar a { color: var(--dark); margin-left: 1.25rem; font-weight: 600; }
+.navbar .btn-cta {
+  background: var(--primary);
+  color: var(--dark);
+  padding: .75rem 1.25rem;
+  border-radius: .5rem;
+}
+
+/* Hero */
+.hero { background: var(--soft-sage); color: #fff; }
+.hero::after { background: rgba(0,0,0,.25); }
+
+/* CTA Banner */
+.cta-banner { background: var(--primary); color: var(--dark); text-align: center; padding: 3rem 1rem; }
